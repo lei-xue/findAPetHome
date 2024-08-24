@@ -1,0 +1,6 @@
+export { HomePage } from './Home/HomePage'
+export { ProductLists } from './Products/ProductLists'
+export { ProductDetail } from './ProductDetail'
+export { Register } from './Register'
+export { Login } from './Login'
+export { CartPage } from './Cart/CartPage'
