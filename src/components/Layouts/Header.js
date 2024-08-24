@@ -31,18 +31,16 @@ export const Header = () => {
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Find-A-Pet-Home</span>
           </Link>
           <div className="flex items-center relative">
-            <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-emoji-sunglasses" onClick={() => { setDarkMode(!darkMode) }}></span>
-            <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search" onClick={() => { setSearch(!search) }}></span>
+            <span onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-gear-wide-connected"></span>
+            <span onClick={() => setSearch(!search)}
+              className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search"></span>
             <Link to="/cart" className="text-gray-700 dark:text-white mr-5">
               <span className="text-2xl bi bi-cart-fill relative">
-                <span className="text-white text-sm absolute -top-1 left-2.5 bg-pink-600 px-1 rounded-full">{cartList.length}</span>
+                <span className="text-white text-sm absolute -top-1 left-2.5 bg-rose-500 px-1 rounded-full ">{cartList.length}</span>
               </span>
             </Link>
-            <span onClick={() => setDropdown(!dropdown)} className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-person-circle">
-              {console.log(dropdown)}
-              {dropdown && (token ?
-                <DropdownLoggedIn setDropdown={setDropdown} /> : <DropdownLoggedOut setDropdown={setDropdown} />)}
-            </span>
+            <span onClick={() => setDropdown(!dropdown)} className="bi bi-person-circle cursor-pointer text-2xl text-gray-700 dark:text-white"></span>
+            {dropdown && (token ? <DropdownLoggedIn setDropdown={setDropdown} dropdown={dropdown} /> : <DropdownLoggedOut setDropdown={setDropdown} />)}
           </div>
         </div>
       </nav>
