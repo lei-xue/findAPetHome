@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 import { useCart } from "../context";
 
-export const ProductDetail = () => {
+export const ServiceDetail = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
   const { cartList, addToCart, removeFromCart } = useCart();
@@ -12,19 +12,14 @@ export const ProductDetail = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      let res;
-      if (id <= 3) {
-        res = await fetch(`http://localhost:8000/featured_products/${id}`);
-      } else {
-        res = await fetch(`http://localhost:8000/products/${id}`);
+      const res = await fetch(`http://localhost:8000/featured_products/${id}`);
 
-        if (!res.ok) {
-          throw new Error('Something went wrong');
-        }
-        console.log(res);
-        const data = await res.json();
-        setProduct(data);
+      if (!res.ok) {
+        throw new Error('Something went wrong');
       }
+      console.log(res);
+      const data = await res.json();
+      setProduct(data);
     }
     fetchProduct()
 
@@ -49,17 +44,17 @@ export const ProductDetail = () => {
           </div>
           <div className="max-w-xl my-3 mx-4">
             <p className="text-3xl font-bold text-gray-800 dark:text-slate-200 flex justify-between items-center mx-12">
-              <span className="mr-1 text-2xl text-pink-500">Adoption Fee</span>
+              <span className="mr-1 text-2xl text-pink-500">Service</span>
               <span className="">$ {price}</span>
             </p>
             <p className="my-6 select-none">
-              <span className="font-semibold text-amber-500 border bg-amber-50 rounded-lg px-4 py-1 mr-2">{species}</span>
-              <span className="font-semibold text-emerald-600	border bg-slate-100 rounded-lg px-4 py-1 mr-2">Birth Year {birthYear}</span>
-              <span className="font-semibold text-blue-500 border bg-slate-100 rounded-lg px-4 py-1 mr-2">Neutered</span>
+              <span className="font-semibold text-amber-500 border bg-amber-50 rounded-lg px-4 py-1 mr-2">Afforable</span>
+              <span className="font-semibold text-emerald-600	border bg-slate-100 rounded-lg px-4 py-1 mr-2">Walk-in</span>
+              <span className="font-semibold text-blue-500 border bg-slate-100 rounded-lg px-4 py-1 mr-2">Popular</span>
             </p>
             <blockquote class="my-4 text-xl italic font-semibold text-center text-gray-900 dark:text-white">
               <p className="mx-6 text-left">
-                "{story} || {long_description}"
+                " {long_description}"
               </p>
             </blockquote>
             <p className="my-3">

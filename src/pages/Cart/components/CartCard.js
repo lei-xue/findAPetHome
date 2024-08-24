@@ -5,6 +5,13 @@ export const CartCard = ({ product }) => {
   function handleRemove(product) {
     removeFromCart(product);
   }
+  let url;
+
+  if (product.id < 3) {
+    url = `../featured_products/${product.id}`
+  } else {
+    url = `../products/${product.id}`
+  }
 
   return (
     <div className="flex flex-wrap justify-between border-b dark:border-slate-700 max-w-4xl m-auto p-2 mb-5 ">
@@ -13,7 +20,7 @@ export const CartCard = ({ product }) => {
           <img className="w-32 rounded" src={product.photo} alt={product.name} />
         </Link>
         <div className="">
-          <Link to={`../products/${product.id}`}>
+          <Link to={url}>
             <p className="text-lg ml-2 dark:text-slate-200">{product.name}</p>
           </Link>
           <button style={{ textAlign: 'right' }}

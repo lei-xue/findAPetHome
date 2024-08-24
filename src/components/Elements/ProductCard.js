@@ -20,12 +20,12 @@ export const ProductCard = ({ product }) => {
 
   return (
     <div className="m-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <Link to="/" className="relative" >
+      <Link to={`/featured_products/${product.id}`} className="relative" >
         <span className="absolute bottom-4 right-2 px-2 bg-orange-400 bg-opacity-80 text-white rounded">Feature Service</span>
         <img className="rounded-t-lg w-full h-64" src={product.photo} alt={product.name} />
       </Link>
       <div className="p-5">
-        <Link to="/">
+        <Link to={`/featured_products/${product.id}`} >
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{product.name}</h5>
         </Link>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
