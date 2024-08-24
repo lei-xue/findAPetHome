@@ -7,7 +7,6 @@ import { useState, useEffect } from "react"
 export const PetCard = ({ product }) => {
   const { id, name, photo, species, birthYear, description, price } = product
   const year = new Date().getFullYear() - Number(birthYear)
-  console.log(product)
 
   const { cartList, addToCart, removeFromCart } = useCart();
   const [isInCart, setIsInCart] = useState(false);

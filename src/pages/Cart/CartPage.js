@@ -8,7 +8,6 @@ export const CartPage = () => {
 
   return (
     <main>
-      {console.log(cartList)}
       {cartList.length === 0 ? <CartEmpty /> : <CartList />}
 
     </main>

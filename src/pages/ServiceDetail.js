@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 import { useCart } from "../context";
+import { getService } from "../services";
 
 export const ServiceDetail = () => {
   const [product, setProduct] = useState({});
@@ -12,13 +13,7 @@ export const ServiceDetail = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const res = await fetch(`http://localhost:8000/featured_products/${id}`);
-
-      if (!res.ok) {
-        throw new Error('Something went wrong');
-      }
-      console.log(res);
-      const data = await res.json();
+      const data = await getService(id);
       setProduct(data);
     }
     fetchProduct()
@@ -30,7 +25,7 @@ export const ServiceDetail = () => {
     setIsInCart(found ? true : false);
   }, [cartList, product.id])
 
-  const { name, photo, price, species, birthYear, story, description, long_description } = product;
+  const { name, photo, price, description, long_description } = product;
 
   useTitle(name);
   return (

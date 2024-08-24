@@ -17,7 +17,6 @@ export async function getUser() {
 
   const response = await fetch(`http://localhost:8000/600/users/${browserData.cbid}`, requestOptions);
   const data = await response.json();
-  console.log(data);
   return data;
 }
 
@@ -33,14 +32,11 @@ export async function getUserOrders() {
 
   const response = await fetch(`http://localhost:8000/660/orders?user.id=${browserData.cbid}`, requestOptions)
   const data = await response.json();
-  console.log(data);
   return data;
 }
 
 export async function createOrder(cartList, total, user) {
   const browserData = getSession();
-  console.log(cartList);
-  console.log(user);
   const order = {
     cartList: cartList,
     amount: total,
@@ -62,6 +58,5 @@ export async function createOrder(cartList, total, user) {
 
   });
   const data = await response.json();
-  console.log(data);
   return data
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 import { useCart } from "../context";
+import { getProduct } from "../services";
 
 export const ProductDetail = () => {
   const [product, setProduct] = useState({});
@@ -12,19 +13,8 @@ export const ProductDetail = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      let res;
-      if (id <= 3) {
-        res = await fetch(`http://localhost:8000/featured_products/${id}`);
-      } else {
-        res = await fetch(`http://localhost:8000/products/${id}`);
-
-        if (!res.ok) {
-          throw new Error('Something went wrong');
-        }
-        console.log(res);
-        const data = await res.json();
-        setProduct(data);
-      }
+      const data = await getProduct(id);
+      setProduct(data);
     }
     fetchProduct()
 

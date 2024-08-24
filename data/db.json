@@ -311,6 +311,26 @@
         "id": 4
       },
       "id": 4
+    },
+    {
+      "cartList": [
+        {
+          "id": 1,
+          "name": "Neutering",
+          "price": 50,
+          "description": "Safe and effective neutering surgery for your pet, helping to prevent unwanted litters and reduce certain health risks.",
+          "photo": "https://images.pexels.com/photos/6234622/pexels-photo-6234622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "long_description": "Neutering, also known as castration, is a surgical procedure that involves the removal of an animal's reproductive organs. This service is safe, effective, and performed under general anesthesia by qualified veterinarians. Neutering your pet not only helps prevent the birth of unwanted puppies or kittens but also contributes to reducing the risk of certain types of cancers and diseases, curbing aggressive behavior, and lessening the tendency to roam. Our clinic ensures a comfortable recovery environment and provides comprehensive post-operative care instructions to help your pet heal quickly and safely."
+        }
+      ],
+      "amount": 50,
+      "quantity": 1,
+      "user": {
+        "name": "sherryx",
+        "email": "leix2833@gmail.com",
+        "id": 4
+      },
+      "id": 5
     }
   ],
   "users": [
