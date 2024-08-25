@@ -4,10 +4,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { useRef } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-import { GoogleLogin } from 'react-google-login';
 import { login } from '../services';
-
-const clientId = "757483194645-jtg9jpf5225439rs01kv7g1ec28nu3pm.apps.googleusercontent.com";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -47,20 +44,6 @@ export const Login = () => {
             <div className="mt-4 text-center">
               <span className="text-gray-500">Or</span>
             </div>
-            {/*
-            <GoogleLogin
-              clientId={clientId}
-              buttonText="Sign in with Google"
-              onSuccess={(response) => {
-                console.log(response);
-                navigate("/products");
-              }}
-              onFailure={(response) => {
-                console.log(response);
-              }}
-              cookiePolicy={'single_host_origin'}
-            />
-            */}
             <button className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">
               <FaGoogle className="text-pink-500 mr-2" />
               Sign in with Google
