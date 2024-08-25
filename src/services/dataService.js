@@ -16,6 +16,9 @@ export async function getUser() {
   }
 
   const response = await fetch(`http://localhost:8000/600/users/${browserData.cbid}`, requestOptions);
+  if (!response.ok) {
+    throw new Error('Something went wrong');
+  }
   const data = await response.json();
   return data;
 }
@@ -31,6 +34,9 @@ export async function getUserOrders() {
   }
 
   const response = await fetch(`http://localhost:8000/660/orders?user.id=${browserData.cbid}`, requestOptions)
+  if (!response.ok) {
+    throw new Error('Something went wrong');
+  }
   const data = await response.json();
   return data;
 }
@@ -57,6 +63,9 @@ export async function createOrder(cartList, total, user) {
     body: JSON.stringify(order),
 
   });
+  if (!response.ok) {
+    throw new Error('Something went wrong');
+  }
   const data = await response.json();
   return data
 }

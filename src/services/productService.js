@@ -40,6 +40,9 @@ export async function getService(id) {
 }
 export async function getFeaturedList() {
   const response = await fetch("http://localhost:8000/444/featured_products");
+  if (!response.ok) {
+    throw new Error('Something went wrong');
+  }
   const data = await response.json()
   return data;
 }

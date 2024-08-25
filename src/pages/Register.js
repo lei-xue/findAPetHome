@@ -4,19 +4,25 @@ import { FaGoogle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../services';
+import { useTitle } from '../hooks/useTitle';
+
 export const Register = () => {
   const navigate = useNavigate()
-
+  useTitle('Register');
   async function handleRegister(event) {
     event.preventDefault();
-    const authDetail = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      password: event.target.password.value
-    }
+    try {
+      const authDetail = {
+        name: event.target.name.value,
+        email: event.target.email.value,
+        password: event.target.password.value
+      }
 
-    const data = await register(authDetail);
-    data.accessToken ? navigate("/products") : toast.error(data);
+      const data = await register(authDetail);
+      data.accessToken ? navigate("/products") : toast.error(data);
+    } catch (error) {
+      toast.error(error.message, { closeButton: true, position: "top-right" });
+    }
   }
 
   return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { PetCard } from "../../components/";
+import { PetCard, ErrorCard } from "../../components/";
 import { FilterBar } from "./components/FilterBar";
 import { useLocation } from "react-router-dom";
 import { useTitle } from "../../hooks/useTitle";
@@ -12,12 +12,18 @@ export const ProductLists = () => {
   const search = useLocation().search;
   const searchTerm = new URLSearchParams(search).get('q');
   const { products, initialProductList } = useFilter();
-
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function fetchProducts() {
-      const uniqueData = await getProductList(searchTerm);
-      initialProductList(uniqueData);
+      try {
+        const uniqueData = await getProductList(searchTerm);
+        initialProductList(uniqueData);
+        setError(false);
+      }
+      catch (err) {
+        setError(true);
+      }
     }
     fetchProducts();
   }, [searchTerm]);
@@ -35,11 +41,10 @@ export const ProductLists = () => {
         </div>
 
         <div className="flex flex-wrap justify-center lg:flex-row">
-
+          {error && <ErrorCard />}
           {products.map((product) => (
             <PetCard key={product.id} product={product} />
           ))}
-
         </div>
       </section>
 
