@@ -24,6 +24,21 @@ export const Login = () => {
       toast.error(error.message, { closeButton: true, position: "top-right" });
     }
   }
+  async function handleLoginGuest() {
+    email.current.value = "test@example.com";
+    password.current.value = "123456";
+    try {
+      const authDetail = {
+        email: email.current.value,
+        password: password.current.value
+      }
+      const data = await login(authDetail);
+      data.accessToken ? navigate("/products") : toast.error(data);
+    } catch (error) {
+      toast.error(error.message, { closeButton: true, position: "top-right" });
+    }
+  }
+
 
 
   return (
@@ -35,7 +50,7 @@ export const Login = () => {
         <div className="w-1/2 flex items-center justify-center">
           <div className="max-w-md w-full p-6">
 
-            <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl mb-12"><span class="text-transparent bg-clip-text bg-gradient-to-r to-pink-600 from-gray-700">Welcome Back</span></h1>
+            <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl mb-12"><span class="text-transparent bg-clip-text bg-gradient-to-r to-pink-600 from-gray-700">Welcome Back</span></h1>
             <form className="space-y-8" onSubmit={handleLogin}>
               <input ref={email} type="email" placeholder="Email" className="w-full p-2 border border-pink-300 rounded-lg focus:outline-none focus:border-pink-500" />
               <input ref={password} type="password" placeholder="Password" className="w-full p-2 border border-pink-300 rounded-lg focus:outline-none focus:border-pink-500" />
@@ -48,8 +63,8 @@ export const Login = () => {
               <FaGoogle className="text-pink-500 mr-2" />
               Sign in with Google
             </button>
-            <button type="submit" className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Register</button>
-            <button type="submit" className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Login as guest</button>
+            <button onClick={() => { navigate('./register') }} type="submit" className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Register</button>
+            <button onClick={handleLoginGuest} type="submit" className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Login as guest</button>
           </div>
         </div>
       </div>
