@@ -46,3 +46,21 @@ export function logout() {
   sessionStorage.removeItem('cbid');
 
 }
+export async function googleLogin(googleData) {
+  try {
+    const checkUserResponse = await fetch(`${process.env.REACT_APP_HOST}/users?email=${googleData.email}`);
+    const existingUsers = await checkUserResponse.json();
+
+    if (existingUsers.length > 0) {
+      return login({ email: googleData.email, password: `google_${googleData.googleId}` });
+    } else {
+      return register({
+        email: googleData.email,
+        password: `google_${googleData.googleId}`,
+        name: googleData.name
+      });
+    }
+  } catch (error) {
+    throw new Error('Google login failed');
+  }
+}
