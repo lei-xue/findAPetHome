@@ -15,7 +15,7 @@ export async function getUser() {
     }
   }
 
-  const response = await fetch(`http://localhost:8000/600/users/${browserData.cbid}`, requestOptions);
+  const response = await fetch(`${process.env.REACT_APP_HOST}/600/users/${browserData.cbid}`, requestOptions);
   if (!response.ok) {
     throw new Error('Something went wrong');
   }
@@ -33,7 +33,7 @@ export async function getUserOrders() {
     }
   }
 
-  const response = await fetch(`http://localhost:8000/660/orders?user.id=${browserData.cbid}`, requestOptions)
+  const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders?user.id=${browserData.cbid}`, requestOptions)
   if (!response.ok) {
     throw new Error('Something went wrong');
   }
@@ -54,7 +54,7 @@ export async function createOrder(cartList, total, user) {
     }
   }
 
-  const response = await fetch(`http://localhost:8000/660/orders`, {
+  const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

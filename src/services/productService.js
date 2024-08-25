@@ -1,7 +1,7 @@
 export async function getProductList(searchTerm) {
-  const res1 = await fetch(`http://localhost:8000/444/products?name_like=${searchTerm ? searchTerm : ''}`);
-  const res2 = await fetch(`http://localhost:8000/444/products?species_like=${searchTerm ? searchTerm : ''}`);
-  const res3 = await fetch(`http://localhost:8000/444/products?description_like=${searchTerm ? searchTerm : ''}`);
+  const res1 = await fetch(`${process.env.REACT_APP_HOST}/444/products?name_like=${searchTerm ? searchTerm : ''}`);
+  const res2 = await fetch(`${process.env.REACT_APP_HOST}/444/products?species_like=${searchTerm ? searchTerm : ''}`);
+  const res3 = await fetch(`${process.env.REACT_APP_HOST}/444/products?description_like=${searchTerm ? searchTerm : ''}`);
   const res = await Promise.all([res1, res2, res3]);
 
   // Check each response's status
@@ -21,7 +21,7 @@ export async function getProductList(searchTerm) {
 }
 
 export async function getProduct(id) {
-  const res = await fetch(`http://localhost:8000/444/products/${id}`);
+  const res = await fetch(`${process.env.REACT_APP_HOST}/444/products/${id}`);
   if (!res.ok) {
     throw new Error('Something went wrong');
   }
@@ -30,7 +30,7 @@ export async function getProduct(id) {
 }
 
 export async function getService(id) {
-  const res = await fetch(`http://localhost:8000/444/featured_products/${id}`);
+  const res = await fetch(`${process.env.REACT_APP_HOST}/444/featured_products/${id}`);
 
   if (!res.ok) {
     throw new Error('Something went wrong');
@@ -39,7 +39,7 @@ export async function getService(id) {
   return data
 }
 export async function getFeaturedList() {
-  const response = await fetch("http://localhost:8000/444/featured_products");
+  const response = await fetch(`${process.env.REACT_APP_HOST}/444/featured_products`);
   if (!response.ok) {
     throw new Error('Something went wrong');
   }
