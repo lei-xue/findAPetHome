@@ -9,7 +9,7 @@ export const ProductCard = ({ product }) => {
   useEffect(() => {
     const found = cartList.find((item) => item.id === product.id);
     setIsInCart(found ? true : false);
-  }, [cartList])
+  }, [cartList]) // eslint-disable-line react-hooks/exhaustive-deps
 
   function handleClick(product) {
     addToCart(product);
