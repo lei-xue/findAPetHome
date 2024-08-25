@@ -9,7 +9,7 @@ export const PageNotFound = () => {
         <div className="flex flex-col items-center my-4">
 
           <img className="w-full h-auto max-w-screen-sm mx-auto object-contain" src="https://img.freepik.com/free-vector/funny-tired-cat-animal-meme_23-2149002657.jpg?t=st=1724544205~exp=1724547805~hmac=f9630dc756e7cbd4ce0a35e12ca42d5f4ffe59fe1f3ec38b899e0e9fbfec1dad&w=996" alt="page-404" />
-          <p className="text-5xl text-gray-700 font-bold my-5 dark:text-white text-center">404, Oops!</p>
+          <p className="text-5xl text-gray-700 font-bold my-5 dark:text-white text-center">404, Oops!!</p>
         </div>
         <div className="flex justify-center my-2">
           <Link to="/">
