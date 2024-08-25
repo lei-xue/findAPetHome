@@ -49,7 +49,7 @@ export const Register = () => {
               <FaGoogle className="text-pink-500 mr-2" />
               Sign in with Google
             </button>
-            <button type="submit" className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Sign In</button>
+            <button onClick={() => { navigate('../login') }} type="submit" className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Sign In</button>
 
           </div>
         </div>

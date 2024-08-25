@@ -25,8 +25,8 @@ export const Login = () => {
     }
   }
   async function handleLoginGuest() {
-    email.current.value = "test@example.com";
-    password.current.value = "123456";
+    email.current.value = process.env.REACT_APP_GUEST_LOGIN;
+    password.current.value = process.env.REACT_APP_GUEST_PASSWORD;
     try {
       const authDetail = {
         email: email.current.value,
@@ -63,7 +63,7 @@ export const Login = () => {
               <FaGoogle className="text-pink-500 mr-2" />
               Sign in with Google
             </button>
-            <button onClick={() => { navigate('./register') }} type="submit" className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Register</button>
+            <button onClick={() => { navigate('../register') }} type="submit" className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Register</button>
             <button onClick={handleLoginGuest} type="submit" className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Login as guest</button>
           </div>
         </div>
