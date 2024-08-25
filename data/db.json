@@ -196,190 +196,52 @@
     {
       "cartList": [
         {
-          "id": 1,
-          "name": "Neutering",
-          "price": 50,
-          "description": "Safe and effective neutering surgery for your pet, helping to prevent unwanted litters and reduce certain health risks.",
-          "photo": "https://images.pexels.com/photos/6234622/pexels-photo-6234622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "long_description": "Neutering, also known as castration, is a surgical procedure that involves the removal of an animal's reproductive organs. This service is safe, effective, and performed under general anesthesia by qualified veterinarians. Neutering your pet not only helps prevent the birth of unwanted puppies or kittens but also contributes to reducing the risk of certain types of cancers and diseases, curbing aggressive behavior, and lessening the tendency to roam. Our clinic ensures a comfortable recovery environment and provides comprehensive post-operative care instructions to help your pet heal quickly and safely."
+          "id": "cat567890123",
+          "name": "Luna",
+          "photo": "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "species": "cat",
+          "birthYear": "2024",
+          "description": "Luna is a young kitten who is full of energy and curiosity. She will bring a lot of joy to any home.",
+          "story": "Luna, the playful kitten,  was discovered tumbling around in a small crate that had been tipped over. Despite her tiny size, her playful energy filled the barn with life. Luna is now looking for a family that can keep up with her boundless curiosity and provide the love and care she deserves.",
+          "price": 100,
+          "neutered": false
         },
         {
-          "id": 2,
-          "name": "Rabies Vaccination",
-          "price": 20,
-          "description": "Essential rabies vaccination to protect your pet from the deadly rabies virus, with a booster required every 1-3 years.",
-          "photo": "https://images.pexels.com/photos/6235107/pexels-photo-6235107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "long_description": "Rabies vaccination is a crucial preventive measure to protect your pet from the deadly rabies virus, which can be transmitted to humans through bites or scratches. Our clinic provides safe and effective rabies vaccinations for dogs, cats, and other animals, administered by licensed veterinarians. The initial rabies vaccine is typically followed by a booster shot every 1-3 years, depending on local regulations and the specific vaccine used. Protect your pet and your family by ensuring that your furry friend is up-to-date on their rabies vaccinations."
+          "id": "rabbit345678901",
+          "name": "Sleepy",
+          "photo": "https://images.pexels.com/photos/104373/pexels-photo-104373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1p",
+          "species": "rabbit",
+          "birthYear": "2023",
+          "description": "Sleepy loves naps and cuddles. But he is also known to run laps and jump around. Visit him today!",
+          "story": "Sleepy was found curled up in a soft pile of hay, his name fitting his love for naps. But when he wakes up, he’s full of energy, running around and jumping with joy. Sleepy is looking for a home where he can enjoy the best of both worlds: cozy naps and playful bursts of energy.",
+          "price": 50,
+          "neutered": false
+        },
+        {
+          "id": 3,
+          "name": "Health Check",
+          "price": 25,
+          "description": "Comprehensive health check-up including physical examination, vital signs assessment, and blood work to ensure your pet's health.",
+          "photo": "https://images.pexels.com/photos/6235108/pexels-photo-6235108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "long_description": "Regular health check-ups are essential for maintaining your pet's well-being and detecting any potential health issues early. Our clinic offers comprehensive health check services, including a thorough physical examination, assessment of vital signs, and blood work analysis. Our experienced veterinarians will evaluate your pet's overall health and provide personalized recommendations to help keep your furry friend happy and healthy. Schedule a health check-up today to ensure that your pet receives the care and attention they deserve."
         }
       ],
-      "amount": 70,
-      "quantity": 2,
+      "amount": 175,
+      "quantity": 3,
       "user": {
-        "name": "sherryx",
-        "email": "leix2833@gmail.com",
-        "id": 4
+        "name": "demo",
+        "email": "test@example.com",
+        "id": 1
       },
       "id": 1
-    },
-    {
-      "cartList": [
-        {
-          "id": "cat123456789",
-          "name": "Whiskers",
-          "photo": "https://images.pexels.com/photos/1276553/pexels-photo-1276553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "species": "cat",
-          "birthYear": "2021",
-          "description": "Whiskers is a playful cat who loves to explore and chase toys. She's friendly and loves attention.",
-          "story": "Whiskers was discovered while exploring the dusty beams of an old, abandoned barn. Her playful spirit was evident as she pounced on loose strands of hay and chased after shadows. Though she had been fending for herself for some time, her bright eyes and lively energy showed that she was ready to bring her joyful antics into a new, loving home.",
-          "price": 80,
-          "neutered": true
-        },
-        {
-          "id": "cat234567890",
-          "name": "Mittens",
-          "photo": "https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "species": "cat",
-          "birthYear": "2022",
-          "description": "Mittens is a calm and gentle cat who enjoys quiet time. She's perfect for someone looking for a relaxed companion.",
-          "story": "Mittens was found curled up in a quiet corner of the barn, enjoying the solitude and calm. Her gentle nature was immediately apparent as she softly approached, seeking the warmth of human companionship. Mittens is the perfect cat for someone looking for a relaxed and peaceful friend to share quiet moments with.",
-          "price": 70,
-          "neutered": true
-        }
-      ],
-      "amount": 150,
-      "quantity": 2,
-      "user": {
-        "name": "sherryx",
-        "email": "leix2833@gmail.com",
-        "id": 4
-      },
-      "id": 2
-    },
-    {
-      "cartList": [
-        {
-          "id": "cat234567890",
-          "name": "Mittens",
-          "photo": "https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "species": "cat",
-          "birthYear": "2022",
-          "description": "Mittens is a calm and gentle cat who enjoys quiet time. She's perfect for someone looking for a relaxed companion.",
-          "story": "Mittens was found curled up in a quiet corner of the barn, enjoying the solitude and calm. Her gentle nature was immediately apparent as she softly approached, seeking the warmth of human companionship. Mittens is the perfect cat for someone looking for a relaxed and peaceful friend to share quiet moments with.",
-          "price": 70,
-          "neutered": true
-        }
-      ],
-      "amount": 70,
-      "quantity": 1,
-      "user": {
-        "name": "sherryx",
-        "email": "leix2833@gmail.com",
-        "id": 4
-      },
-      "id": 3
-    },
-    {
-      "cartList": [
-        {
-          "id": "cat234567890",
-          "name": "Mittens",
-          "photo": "https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "species": "cat",
-          "birthYear": "2022",
-          "description": "Mittens is a calm and gentle cat who enjoys quiet time. She's perfect for someone looking for a relaxed companion.",
-          "story": "Mittens was found curled up in a quiet corner of the barn, enjoying the solitude and calm. Her gentle nature was immediately apparent as she softly approached, seeking the warmth of human companionship. Mittens is the perfect cat for someone looking for a relaxed and peaceful friend to share quiet moments with.",
-          "price": 70,
-          "neutered": true
-        },
-        {
-          "id": "cat123456789",
-          "name": "Whiskers",
-          "photo": "https://images.pexels.com/photos/1276553/pexels-photo-1276553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "species": "cat",
-          "birthYear": "2021",
-          "description": "Whiskers is a playful cat who loves to explore and chase toys. She's friendly and loves attention.",
-          "story": "Whiskers was discovered while exploring the dusty beams of an old, abandoned barn. Her playful spirit was evident as she pounced on loose strands of hay and chased after shadows. Though she had been fending for herself for some time, her bright eyes and lively energy showed that she was ready to bring her joyful antics into a new, loving home.",
-          "price": 80,
-          "neutered": true
-        }
-      ],
-      "amount": 150,
-      "quantity": 2,
-      "user": {
-        "name": "sherryx",
-        "email": "leix2833@gmail.com",
-        "id": 4
-      },
-      "id": 4
-    },
-    {
-      "cartList": [
-        {
-          "id": 1,
-          "name": "Neutering",
-          "price": 50,
-          "description": "Safe and effective neutering surgery for your pet, helping to prevent unwanted litters and reduce certain health risks.",
-          "photo": "https://images.pexels.com/photos/6234622/pexels-photo-6234622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "long_description": "Neutering, also known as castration, is a surgical procedure that involves the removal of an animal's reproductive organs. This service is safe, effective, and performed under general anesthesia by qualified veterinarians. Neutering your pet not only helps prevent the birth of unwanted puppies or kittens but also contributes to reducing the risk of certain types of cancers and diseases, curbing aggressive behavior, and lessening the tendency to roam. Our clinic ensures a comfortable recovery environment and provides comprehensive post-operative care instructions to help your pet heal quickly and safely."
-        }
-      ],
-      "amount": 50,
-      "quantity": 1,
-      "user": {
-        "name": "sherryx",
-        "email": "leix2833@gmail.com",
-        "id": 4
-      },
-      "id": 5
-    },
-    {
-      "cartList": [
-        {
-          "id": "cat123456789",
-          "name": "Whiskers",
-          "photo": "https://images.pexels.com/photos/1276553/pexels-photo-1276553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "species": "cat",
-          "birthYear": "2021",
-          "description": "Whiskers is a playful cat who loves to explore and chase toys. She's friendly and loves attention.",
-          "story": "Whiskers was discovered while exploring the dusty beams of an old, abandoned barn. Her playful spirit was evident as she pounced on loose strands of hay and chased after shadows. Though she had been fending for herself for some time, her bright eyes and lively energy showed that she was ready to bring her joyful antics into a new, loving home.",
-          "price": 80,
-          "neutered": true
-        }
-      ],
-      "amount": 80,
-      "quantity": 1,
-      "user": {
-        "name": "sherryx",
-        "email": "leix2833@gmail.com",
-        "id": 4
-      },
-      "id": 6
     }
   ],
   "users": [
     {
-      "email": "leixue777@gmail.com",
-      "password": "$2a$10$zRJJnxfjpcKT1R4WTE5AM.4x5YPGjf.2fExL6oFSXUuB4kqMnTbE6",
-      "name": "sherry",
+      "email": "test@example.com",
+      "password": "$2a$10$6M5au7mWmjcoQPMUuYkG5OqrIgvMTMOS6BXtHyci2EyGxSfNbn6NC",
+      "name": "demo",
       "id": 1
-    },
-    {
-      "email": "safehu@example.com",
-      "password": "$2a$10$1Bnd6amogrQon5g3fTfS/eg8CGahAycD4Boggus.RqjedDAGJHdXK",
-      "name": "rgeg",
-      "id": 2
-    },
-    {
-      "email": "qfeqwf@gmail.com",
-      "password": "$2a$10$H7K16gs6Ij6G0kDY.MLMe.Ur/cBT6X3UnUt9BMKMl16M.bU9Wtq06",
-      "name": "eafhiuwq",
-      "id": 3
-    },
-    {
-      "email": "leix2833@gmail.com",
-      "password": "$2a$10$HDzClfcjTFI/347UZMI6wOiOI.foUKNR7x9vRUWHhutAsKTAIO/J2",
-      "name": "sherryx",
-      "id": 4
     }
   ]
 }

@@ -1,6 +1,19 @@
-import { Link } from "react-router-dom"
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 export const OrderSuccess = ({ data }) => {
+  const [paymentId, setPaymentId] = useState('');
+
+  useEffect(() => {
+    setPaymentId(generatePaymentId());
+  }, []);
+
+  function generatePaymentId() {
+    const prefix = "xyz_";
+    const randomNumbers = Math.random().toString().slice(2, 11); // Generate 9 random digits
+    return prefix + randomNumbers;
+  }
+
   return (
     <section className="text-xl text-center max-w-4xl mx-auto my-10 py-5 dark:text-slate-100 border dark:border-slate-700 rounded">
       <div className="my-5">
@@ -11,7 +24,7 @@ export const OrderSuccess = ({ data }) => {
       <div className="my-5">
         <p>Your order is confirmed.</p>
         <p>Please check your mail ({data.user.email}) for the eBook.</p>
-        <p className="my-5">Payment ID: xyz_123456789</p>
+        <p className="my-5">Payment ID: {paymentId}</p>
       </div>
       <Link to="/products" type="button" className="text-white bg-pink-700 hover:bg-pink-800 rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-pink-600 dark:hover:bg-pink-700 focus:outline-none">Continue Shopping <i className="ml-2 bi bi-cart"></i></Link>
     </section>
