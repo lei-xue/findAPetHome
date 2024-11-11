@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { FaGoogle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../services';
