@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { login, googleLogin } from '../services/authService';
-import CustomGoogleLogin from './CustomGoogleLogin';
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -43,27 +42,6 @@ export const Login = () => {
     }
   }
 
-  const handleGoogleLoginSuccess = async (response) => {
-    setIsLoading(true);
-    try {
-      const authDetail = {
-        email: response.profileObj.email,
-        googleId: response.profileObj.googleId,
-        name: response.profileObj.name
-      };
-      const data = await googleLogin(authDetail);
-      data.accessToken ? navigate("/products") : toast.error("Google login failed");
-    } catch (error) {
-      toast.error(error.message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleGoogleLoginFailure = (error) => {
-    toast.error("Google login failed. Please try again.");
-  };
-
   return (
     <main>
       <div className="mt-10 flex h-[80vh] bg-pink-50 dark:bg-pink-100 rounded-lg">
@@ -83,10 +61,6 @@ export const Login = () => {
             <div className="mt-4 text-center">
               <span className="text-gray-500">Or</span>
             </div>
-            <CustomGoogleLogin
-              onLoginSuccess={handleGoogleLoginSuccess}
-              onLoginFailure={handleGoogleLoginFailure}
-            />
             <button onClick={() => navigate('../register')} disabled={isLoading} className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Register</button>
             <button onClick={handleLoginGuest} disabled={isLoading} className="mt-4 w-full flex items-center justify-center p-2 mb-6 border border-pink-300 rounded-lg hover:bg-gray-50">Login as guest</button>
           </div>
