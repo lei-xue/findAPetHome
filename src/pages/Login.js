@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-import { login, googleLogin } from '../services/authService';
+import { login} from '../services/authService';
 
 export const Login = () => {
   const navigate = useNavigate();
